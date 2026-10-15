@@ -1,0 +1,72 @@
+AI Companion Cube - Circuit Diagram
+=================================
+
+ESP32 Pin Connections:
+---------------------
+
+1. Microphone (MAX9814):
+   - VCC -> ESP32 3.3V
+   - GND -> ESP32 GND
+   - OUT -> ESP32 GPIO34
+
+2. PIR Motion Sensor:
+   - VCC -> ESP32 3.3V
+   - GND -> ESP32 GND
+   - OUT -> ESP32 GPIO26
+
+3. LED Ring (WS2812B):
+   - VCC -> ESP32 5V
+   - GND -> ESP32 GND
+   - DIN -> ESP32 GPIO27
+
+4. Speaker:
+   - + -> ESP32 GPIO25
+   - - -> ESP32 GND
+
+5. Temperature Sensor (MLX90614):
+   - VCC -> ESP32 3.3V
+   - GND -> ESP32 GND
+   - SDA -> ESP32 GPIO21
+   - SCL -> ESP32 GPIO22
+
+Power Supply:
+------------
+- ESP32 powered via USB or external 5V supply
+- Rechargeable battery pack (3.7V Li-ion) with charging circuit
+- Battery voltage divider for monitoring:
+  - Battery + -> 10k resistor -> ESP32 GPIO32
+  - Battery + -> 20k resistor -> GND
+
+Component List:
+--------------
+1. ESP32 Development Board
+2. MAX9814 Microphone Module
+3. PIR Motion Sensor
+4. WS2812B LED Ring (12 LEDs)
+5. Small Speaker (8Ω)
+6. MLX90614 Temperature Sensor
+7. 3.7V Li-ion Battery Pack
+8. Battery Charging Module
+9. Jumper Wires
+10. Breadboard
+11. Resistors:
+    - 2x 10kΩ
+    - 1x 20kΩ
+
+Notes:
+------
+1. Use appropriate voltage dividers for 5V components
+2. Add decoupling capacitors near power inputs
+3. Consider adding a power switch
+4. Use shielded wires for microphone connection
+5. Keep wires as short as possible
+6. Add a fuse for battery protection
+
+Safety Considerations:
+---------------------
+1. Never connect components while powered
+2. Double-check all connections
+3. Use appropriate wire gauges
+4. Add protection diodes where needed
+5. Consider adding a fuse
+6. Keep battery connections secure 
